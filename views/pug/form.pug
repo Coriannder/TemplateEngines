@@ -1,0 +1,21 @@
+
+extends layouts/main.pug
+
+block content
+
+    div.container.mt-4.mb-4(style='width: 500px;')
+        h2 Ingrese Producto
+        form.mt-4(method='POST' action='/productos')
+            .mb-3
+            label.form-label(for='title') Title
+            input.form-control(type='text' name='title' required='')
+            .mb-3
+            label.form-label(for='price') Price
+            input.form-control(type='number' name='price' required='')
+            .mb-3
+            label.form-label(for='thumbnail') Thumbnail (url)
+            input.form-control(type='text' name='thumbnail' required='')
+            button.btn.btn-primary.mt-4 Guardar
+        br
+        a(href='/productos')
+            button.btn.btn-success Ver Productos

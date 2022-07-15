@@ -1,0 +1,26 @@
+
+extends layouts/main.pug
+
+block content
+
+
+    div.container.mt-4(style='width: 500px;')
+        h2 Productos
+        table.table.table-success.table-striped
+            thead.table-dark
+            tr
+                th(scope='col') #
+                th(scope='col') Title
+                th(scope='col') Price
+                th(scope='col') Thumbnail
+            each producto of productos
+                tbody
+                tr
+                    th(scope='row')=producto.id
+                    td=producto.title
+                    td=producto.price
+                    td
+                        img(src=producto.thumbnail alt='imagen de '+producto.title style='height: 20px;')
+        br
+        a(href='/')
+            button.btn.btn-success Ingresar Producto

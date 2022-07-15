@@ -1,0 +1,32 @@
+
+
+
+<div class="container mt-4" style="width: 500px;">
+    <h2>Productos</h2>
+    <table class="table table-success table-striped">
+        <thead class="table-dark">
+            <tr>
+            <th scope="col">#</th>
+            <th scope="col">Title</th>
+            <th scope="col">Price</th>
+            <th scope="col">Thumbnail</th>
+            </tr>
+        </thead>
+        {{#each productos}}
+        <tbody>
+            <tr>
+            <th scope="row">{{id}}</th>
+            <td>{{title}}</td>
+            <td>${{price}}</td>
+            <td>
+                <img src="{{thumbnail}}" alt="imagen de {{title}}" style="height: 20px;">
+            </td>
+            </tr>
+        </tbody>
+        {{/each}}
+    </table>
+    <br>
+    <a href="/">
+        <button class="btn btn-success">Ingresar Producto</button>
+    </a>
+</div>
